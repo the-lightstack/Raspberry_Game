@@ -12,8 +12,8 @@ class Player:
 
         self.color=(0,0,0)
 
-        self.movement_velocity=pygame.Vector2(-2,0)
-        self.gravity=-0.1
+        self.movement_velocity=pygame.Vector2(-8,0)
+        self.gravity=-0.4
         self.dead=False
     def update(self):
         self.update_pos()
@@ -33,7 +33,7 @@ class Player:
         elif not self.in_air and not self.jump:
             self.movement_velocity.y=1
         if self.jump==True and not self.in_air:
-            self.movement_velocity.y-=5
+            self.movement_velocity.y-=10
             self.in_air=True
             self.jump=False
     
